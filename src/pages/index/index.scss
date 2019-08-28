@@ -1,0 +1,90 @@
+@import "src/common.scss";
+
+.index-section {
+  .btn-red {
+    color: $red!important;
+    border: 0.125rem solid $red;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.1875rem 0.875rem;
+  }
+
+  .section-hd {
+    padding: 2.5rem 1.875rem 3.75rem;
+
+    .slogan {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    .desc-wrapper {
+      margin-top: 2.5rem;
+
+      .desc {
+        font-size: 0.9375rem;
+        letter-spacing: 0.0625rem;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  .section-md {
+    .due {
+      .img {
+        display: block;
+        width: 5rem;
+        margin-bottom: 1.875rem;
+      }
+
+      padding: 3.125rem 2.5rem;
+    }
+
+    .investment {
+      padding: 3.125rem 2.5rem;
+
+      .img-row {
+        display: flex;
+        margin-top: 0.9375rem;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        .img-col {
+          width: 31%;
+          max-width: 11.25rem;
+          background-color: #eee;
+          text-align: center;
+          height: 7.5rem;
+          position: relative;
+
+          @media (max-width: 25.625rem) {
+            height: 4.6875rem;
+          }
+
+          @media (min-width: 25.6875rem) and(max-width: 40.625rem) {
+            height: 7.5rem;
+          }
+
+          @media (min-width: 40.6875rem) {
+            height: 9.375rem;
+          }
+
+          img {
+            width: 75%;
+            padding: 10%;
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+          }
+        }
+      }
+    }
+  }
+
+  .section-bd {
+    padding: 3.125rem 2.5rem;
+  }
+}

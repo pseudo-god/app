@@ -1,0 +1,47 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$red: #D63B45;
+
+ul {
+  margin: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+hr {
+  border-top-color: #fff;
+}
+
+.red {
+  color: $red;
+}
+
+.white {
+  color: #fff;
+}
+
+.bg-grey {
+  background-color: #F0F0F0;
+}
+
+.title-lg {
+  font-size: 2.125rem;
+}
+
+.desc-lg {
+  font-size: 1.0625rem;
+  line-height: 1.77;
+}
+
+.desc-md {
+  font-size: 0.9375rem;
+  line-height: 1.77;
+}
+
+.top-banner {
+  padding: 3.125rem 1.875rem;
+}

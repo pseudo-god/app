@@ -1,0 +1,38 @@
+.top-nav-section {
+  padding: 0.9375rem 1.875rem!important;
+  
+  .nav-link {
+    color: #fff !important;
+  }
+
+  #top-nav {
+    padding: 0.625rem 1.25rem;
+
+    .dropdown-menu a {
+      color: #fff !important;
+
+      &:hover {
+        background: inherit;
+        color: inherit;
+      }
+    }
+  }
+
+  .nav-dropdown {
+    & .dropdown-menu {
+      border: none;
+      padding: 0;
+      background: inherit;
+
+      & .dropdown-item::before {
+        display: inline-block;
+        margin-right: 0.55em;
+        content: "";
+        border-left: 0.3em solid;
+        border-bottom: 0.3em solid transparent;
+        border-right: 0;
+        border-top: 0.3em solid transparent;
+      }
+    }
+  }
+}

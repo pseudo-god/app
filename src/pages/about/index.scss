@@ -1,0 +1,24 @@
+@import "src/common.scss";
+
+.about-section {
+  .section-bd {
+    padding: 3.125rem 1.875rem;
+
+    .btn {
+      a {
+        color: #000;
+      }
+      
+      border-bottom: 0.0625rem solid #000;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 1.5625rem;
+      font-size: 1.5rem;
+      width: 80%;
+      margin: 1.875rem auto 3.75rem;
+      display: block;
+      text-align: left;
+      border-radius: 0;
+    }
+  }
+}
