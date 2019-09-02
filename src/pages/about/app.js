@@ -46,10 +46,6 @@ class App extends Component {
 					<div className='btn'>
 						<a href='/contact'>{intl.get('ABOUT_BTN1')}</a>
 					</div>
-					<div className='desc-lg'>{intl.get('ABOUT_DESC3')}</div>
-					<div className='btn'>
-						<a href='/community'>{intl.get('ABOUT_BTN2')}</a>
-					</div>
 				</div>
 				<Footer />
 			</div>

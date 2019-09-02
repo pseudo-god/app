@@ -39,7 +39,7 @@ class Footer extends React.Component {
 
         <ul className='footer-list'>
           <p className='big-title'>{intl.get('ABOUT')}</p>
-          <li><a href='/#'>EVOLAB</a></li>
+          <li><a href='/about'>{intl.get('ABOUT_US')}</a></li>
           <li><a href='/group'>{intl.get('GROUP')}</a></li>
           <li><a href='/join'>{intl.get('JOIN_US')}</a></li>
         </ul>
