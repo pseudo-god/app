@@ -25,15 +25,6 @@ class App extends Component {
 						<Form.Group controlId='email'>
 							<Form.Control type='text' placeholder={intl.get('CONTACT_PH2')} />
 						</Form.Group>
-						<Form.Group controlId='type'>
-							<Form.Control as='select' placeholder={intl.get('CONTACT_PH3')}>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</Form.Control>
-						</Form.Group>
 						<Form.Group controlId='content'>
 							<Form.Control as='textarea' rows='10' placeholder={intl.get('CONTACT_PH4')} />
 						</Form.Group>

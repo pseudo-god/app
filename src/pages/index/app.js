@@ -49,7 +49,6 @@ class App extends Component {
 					</div>
 
 					<div className='investment'>
-						<a className='btn-red' href='investment'>{intl.get('INDEX_BTN2')}</a>
 						<div className='title-lg' style={{marginTop: 40, marginBottom: 20}}>{intl.get('INDEX_TITLE5')}</div>
 						<div className='img-group'>
 							{IMG_URLS.map((arr, i) =>
