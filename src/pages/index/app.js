@@ -5,19 +5,24 @@ import withIntl from 'component/withIntl';
 import intl from 'react-intl-universal';
 import dueIcon from 'src/assets/Index/2.png';
 
-const IMG_HOVER_URLS = [
-	['1_', '2_', '3_'],
-	['4_', '5_', '6_'],
-	['7_', '8_', '9_']
-].map(i => i.map(sub => require(`src/assets/Index/investment/${sub}.png`)));
+const IMG_HOVER_URLS =  [
+	['1', '2', '3'], 
+	['4', '5', '6'], 
+	['7', '8', '9']
+].map(i => i.map(sub => require(`src/assets/Index/investment/${sub}_.png`)));
 
 const IMG_URLS = [
 	['1', '2', '3'], 
 	['4', '5', '6'], 
 	['7', '8', '9']
-].map(i => i.map(sub => require(`src/assets/Index/investment/${sub}.png`)));
+].map(i => i.map(sub => require(`src/assets/Index/investment/${sub}_.png`)));
 
-const IMG_LINK = 'https://www.cryptoyc.com';
+const IMG_LINK = [
+	['https://bitcoin.org', 'https://ethereum.org', ''],
+	['https://iota.org', 'https://filecoin.io', 'http://idni.org'],
+	['https://eos.io', 'https://z.cash', ''],
+];
+
 
 class App extends Component {
 	render() {
@@ -51,7 +56,7 @@ class App extends Component {
 								<div className='img-row' key={i}> 
 									{arr.map((url, j) => 
 										<div className='img-col'>
-											<a href={IMG_LINK} target='_blank'>
+											<a href={IMG_LINK[i][j]} target='_blank'>
 												<img
 													className='img'
 													src={url} 

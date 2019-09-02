@@ -28,7 +28,7 @@ class TopNav extends Component {
 					<Nav className='mr-auto'>
 						<Nav.Link href='/'>{intl.get('HOME')}</Nav.Link>
 						<Nav.Link href='/benchmark'>{intl.get('DUE')}</Nav.Link>
-						<Nav.Link href='/community'>{intl.get('COMMUNITY')}</Nav.Link>
+						{/* <Nav.Link href='/community'>{intl.get('COMMUNITY')}</Nav.Link> */}
 						<Nav.Link href='/investment'>{intl.get('INVESTMENT')}</Nav.Link>
 						<Nav.Link target='_blank' rel='noopener noreferrer' href='https://cryptoyc.github.io/'>{intl.get('BLOG')}</Nav.Link>
 						<NavDropdown className='nav-dropdown' title={intl.get('ABOUT')} id='basic-nav-dropdown'>

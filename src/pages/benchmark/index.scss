@@ -1,1 +1,57 @@
 @import "src/common.scss";
+
+.benchmark-section {
+  .section-md {
+    padding: 3.125rem 1.875rem 3.75rem;
+
+    .group {
+      margin-bottom: 2.5rem;
+
+      .title {
+        font-size: 1.625rem;
+        margin-bottom: 0.9375rem;
+      }
+
+      .desc {
+        letter-spacing: 0.0625rem;
+      }
+      
+      img {
+        width: 2.5rem;
+        margin-top: 1.875rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+
+  .section-bd {
+    padding: 0.625rem;
+    margin-bottom: 2.5rem;
+
+    .title {
+      font-size: 1.625rem;
+    }
+
+    .bg-gray {
+      background: #eee;
+      padding: 1.875rem; 
+    }
+    
+    .btn {
+      a {
+        color: #000;
+      }
+      
+      border-bottom: 0.0625rem solid #000;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 1.5625rem;
+      font-size: 1.5rem;
+      width: 100%;
+      margin: 1.875rem auto 3.75rem;
+      display: block;
+      text-align: left;
+      border-radius: 0;
+    }
+  }
+}

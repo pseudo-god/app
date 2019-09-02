@@ -1,0 +1,61 @@
+@import "src/common.scss";
+
+.join-section {
+  .bg-btn {
+    margin: 30px auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fff;
+    width: 300px;
+    padding-bottom: 30px;
+    text-align: center;
+    padding-top: 4px;
+  }
+
+  .section-hd {
+    padding: 60px;
+    background: #F0F0F0;
+    
+    .title-lg {
+      font-weight: bold;
+    }
+  
+    .desc-lg {
+      font-size: 1.8rem;
+      margin: 15px 0 20px;
+    }
+  
+    .btn {
+      cursor: pointer;
+      background-color: #171717;
+      color: #fff;
+      letter-spacing: 2px;
+      border-radius: 0;
+      margin-top: 14px;
+    }
+  }
+
+  .section-md {
+    padding: 70px;
+
+    .group {
+      .title {
+        font-size: 18px;
+        margin: 25px 0;
+      }
+
+      .desc {
+        font-size: 18px;
+      }
+
+      .flag {
+        width: 50px;
+        margin: 60px 0;
+      }
+    }
+  }
+
+  .section-md {
+    padding: 50px;
+  }
+}

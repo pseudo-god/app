@@ -36,7 +36,7 @@ class App extends Component {
 				<div className='section-md'>
 					<img
 						className='w-100'
-						src={lang === 'zh-CN' ? aboutIMG : aboutEnIMG}
+						src={(lang === 'zh-CN' || !lang) ? aboutIMG : aboutEnIMG}
 						style={{padding: '30px 15px'}}
 					/>
 				</div>
