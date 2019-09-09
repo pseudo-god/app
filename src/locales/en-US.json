@@ -108,5 +108,17 @@
   "JOIN_DESC4_1": "Face-to-face communication with founder team, relax.",
   "JOIN_DESC4_2": "The last and least reached step. Would you like to take the challenge?",
   "JOIN_DESC5_1": "If you feel good about us and we like you too. Then let’s be together!",
-  "JOIN_DESC5_2": "Express your thoughts anytime, or in private. Dont’ be shy. Whatever we do (include interview), we are trying to do it Perfectly."
+  "JOIN_DESC5_2": "Express your thoughts anytime, or in private. Dont’ be shy. Whatever we do (include interview), we are trying to do it Perfectly.",
+
+  "PROJ_DESC": "CryptoYC Benchmark, the expert in techinical due diligence of blockchan projects, is committed to solving core problems in value investing for investors. Please submit details of the project you want to get tested in our due diligence system here. Note: We will contact you within three working days for your application.",
+  "PROJ_TIT": "Info you need to submit for your project",
+  "PROJ_PH1": "Name of project",
+  "PROJ_PH2": "Offical website",
+  "PROJ_PH3": "Whitepaper & Tech documents",
+  "PROJ_PH4": "Github",
+  "PROJ_PH5": "Contact of project",
+  "PROJ_PH6": "E-mail",
+  "PROJ_PH7": "Remarks",
+  "PROJ_PH8": "Attachments (if you have)",
+  "PROJ_BTN": "Submit"
 }

@@ -1,0 +1,28 @@
+@import "src/common.scss";
+
+.project-section {
+  .section-hd {
+    padding: 3.5rem 1.5625rem 1.25rem;
+
+    .desc {
+      font-size: 1.25rem;
+      margin-top: 1.875rem;
+    }
+  }
+
+  .section-bd {
+    padding: 1.5rem 1.5625rem 3.75rem;
+
+    .title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn {
+      display: block;
+      margin: 1.875rem auto;
+      padding: 0.125rem 2.5rem;
+    }
+  }
+}

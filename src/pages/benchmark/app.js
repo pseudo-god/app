@@ -72,7 +72,7 @@ class App extends Component {
 						{IMG_URLS.map((arr, i) =>
 							<div className='img-row' key={i}> 
 								{arr.map((url, j) => 
-									<div className='img-col'>
+									<div className='img-col' onClick={() => window.location.href='/submit'}>
 										<a target='_blank'>
 											<img
 												className='img'
@@ -95,7 +95,7 @@ class App extends Component {
 							<a href='/contact'>{intl.get('BENCHMARK_BTN1')}</a>
 						</div>
 						<div className='btn'>
-							<a href='/submit'>{intl.get('BENCHMARK_BTN2')}</a>
+							<a href='/project'>{intl.get('BENCHMARK_BTN2')}</a>
 						</div>
 					</div>
 				</div>

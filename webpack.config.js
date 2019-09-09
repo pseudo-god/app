@@ -53,7 +53,7 @@ module.exports = (env, argv) => ({
 				exclude: /node_modules/,
 			},
 			{
-                test: /\.(png|jpg)$/,
+                test: /\.(png|jpg|gif)$/,
                 loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',
                 options:{
                     publicPath:'/'

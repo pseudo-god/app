@@ -1,1 +1,31 @@
 @import "src/common.scss";
+
+.submit-table {
+  margin: 40px 10% 60px;
+
+  .table {
+    margin: 40px auto;
+    width: 100%;
+
+    thead {
+      background-color: #d63b45;
+
+      th {
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+
+    tr td {
+      font-size: 15px;
+    }
+
+    tr:nth-child(2n) {
+      background-color: #dee2e6;
+    }
+
+    tr:hover {
+      background-color: #e3959c;
+    }
+  }
+}
