@@ -1,10 +1,10 @@
-import { Component } from 'react'
+import React from 'react'
 import TopNav from 'component/TopNav'
 import Footer from 'component/Footer'
 import withIntl from 'component/withIntl'
 import axios from 'axios'
 
- class App extends Component {
+ class App extends React.Component {
     constructor(props) {
       super(props)
       this.state = {

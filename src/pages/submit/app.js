@@ -58,7 +58,7 @@ class App extends Component {
               <tbody>
                 {dataSource.map((item, idx) => (
                   <tr onClick={() => {
-                    window.location.href=`/proSubDetail?id=${idx+1}`
+                    window.location.href=`/prosubdetail?id=${idx+1}`
                   }}>
                     <td>{item.name}</td>
                     <td>{item.rating}</td>
