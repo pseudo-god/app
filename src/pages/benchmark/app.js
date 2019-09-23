@@ -39,6 +39,14 @@ const IMG_URLS = [
 	['4', '5', '6']
 ].map(i => i.map(sub => require(`src/assets/Benchmark/1/${sub}_.png`)));
 
+const IMG_LINKS = [
+	'https://baidu.com',
+	'/submit',
+	'/submit',
+	'/submit',
+	'/submit',
+	'/submit'
+]
 
 class App extends Component {
 	getGroup = (title, desc, img) => {
@@ -72,7 +80,7 @@ class App extends Component {
 						{IMG_URLS.map((arr, i) =>
 							<div className='img-row' key={i}> 
 								{arr.map((url, j) => 
-									<div className='img-col' onClick={() => window.location.href='/submit'}>
+									<div className='img-col' onClick={() => window.location.href=IMG_LINKS[j]}>
 										<a target='_blank'>
 											<img
 												className='img'
