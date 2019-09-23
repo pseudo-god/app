@@ -34,13 +34,7 @@ class App extends Component {
           })
           .then(res => {
             this.setState({
-              dataSource: res.data.data.list || [
-                {
-                  name: 'sd',
-                  rating: 'asd',
-                  risk: 'sd'
-                }
-              ]
+              dataSource: res.data.data.list ||[]
             });
           });
       }
