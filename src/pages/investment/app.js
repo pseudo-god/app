@@ -6,11 +6,11 @@ import intl from 'react-intl-universal';
 
 import topBanner from 'src/assets/About/2.png';
 
-const IMG_LINK = [
-	['https://bitcoin.org', 'https://ethereum.org', ''],
-	['https://iota.org', 'https://filecoin.io', 'http://idni.org'],
-	['https://eos.io', 'https://z.cash', ''],
-];
+// const IMG_LINK = [
+// 	['https://bitcoin.org', 'https://ethereum.org', ''],
+// 	['https://iota.org', 'https://filecoin.io', 'http://idni.org'],
+// 	['https://eos.io', 'https://z.cash', ''],
+// ];
 
 class App extends Component {
 	getImg = (arr, url) => {
@@ -20,17 +20,17 @@ class App extends Component {
 		const IMG_1 = this.getImg([
 			['1', '2', '3'],
 			['4', '5', '6'],
-			['7', '8']
+			['7', '8','9']
 		], 'Investment/1');
 		const IMG_1_HOVER = this.getImg([
 			['1_', '2_', '3_'],
 			['4_', '5_', '6_'],
-			['7_', '8_']
+			['7_', '8_','9_']
 		], 'Investment/1');
 		const IMG_LINK_1 = [
 			['https://chaoex.com', 'https://bitrabbit.com', 'https://sfex.net'],
 			['', '', 'http://candaq.com'],
-			['https:// sky.io', 'http://tezas.com']
+			['https:// sky.io', 'http://tezas.com','http://waterdrip.io']
 		];
 		const IMG_2 = this.getImg([
 			['1', '2', '3'], 
