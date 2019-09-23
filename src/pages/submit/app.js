@@ -34,7 +34,13 @@ class App extends Component {
           })
           .then(res => {
             this.setState({
-              dataSource: res.data.data.list || []
+              dataSource: res.data.data.list || [
+                {
+                  name: 'sd',
+                  rating: 'asd',
+                  risk: 'sd'
+                }
+              ]
             });
           });
       }
@@ -56,8 +62,10 @@ class App extends Component {
                 <th>项目风险</th>
               </thead>
               <tbody>
-                {dataSource.map(item => (
-                  <tr>
+                {dataSource.map((item, idx) => (
+                  <tr onClick={() => {
+                    window.location.href=`/proSubDetail?id=${idx+1}`
+                  }}>
                     <td>{item.name}</td>
                     <td>{item.rating}</td>
                     <td>{item.risk}</td>
