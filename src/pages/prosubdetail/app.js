@@ -19,16 +19,12 @@ import axios from 'axios'
 
     fetch(id){
       const that = this
-      axios.get(`https://cryptoyc.net/survey/report/1`, {
-        params: {
-          id: id,
-        }
-      }).then(res => {
+      axios.get(`https://cryptoyc.net/survey/report/${id}`).then(res => {
         const { code, data, message } = res.data
         if(code == 200){
           console.log('getDetail: ', data)
           that.setState({
-            detail: data || {},
+            detail: data || {name: ''},
             content: data.content
           })
         } else {
@@ -42,7 +38,7 @@ import axios from 'axios'
 
     render() {
       const {t}=this.props
-      const { content } = this.state
+      const { detail, content } = this.state
       return <div className="proSubDetail">
           <TopNav bg='dark' />
           <div>
@@ -51,7 +47,7 @@ import axios from 'axios'
               <div className='diaocha'>区块链技术尽职调查</div>
             </div>
             <div className='detail'>
-              <div className='title'>EVOLAB Benchmark | Cardano项目技术尽调</div>
+              {/* <div className='title'>{detail.name}</div> */}
               <div className='content' dangerouslySetInnerHTML={{__html: content}}></div>
             </div>
           </div>

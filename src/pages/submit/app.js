@@ -12,8 +12,8 @@ class App extends Component {
   state = {
     dataSource: [],
     pageNo: 1,
-    pageSize: 0
-  };
+    pageSize: 0,
+  }
 
   componentDidMount() {
     this.fetch();
