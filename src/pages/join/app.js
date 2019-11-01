@@ -66,11 +66,6 @@ class App extends Component {
 					<div style={{backgroundImage: `url(${hoverIMG2})`}} className='bg-btn'>{intl.get('JOIN_TITLE3')}</div>
 					<div style={{marginBottom: 40}} className='w-75 mx-auto'>
 						<Collapse title='区块链开发工程师' content={<img style={{width: '100%'}} src={hireIMG} />} />
-						<Collapse title='新媒体运营' content=' ' />
-						<Collapse title='CTO/技术总监' content=' ' />
-						<Collapse title='PHP架构师' content=' ' />
-						<Collapse title='社区运营' content=' ' />
-						<Collapse title='Golang高级开发工程师' content=' ' />
 					</div>
 				</div>
 				<Footer />
