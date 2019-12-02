@@ -9,7 +9,7 @@ export default class utils {
 
   static fetchGroupInfo(type) {
     const arrGroup = [
-      [1, 2, 3, 4, 5, 7, 9, 10, 12],
+      [1, 2, 3, 4, 5, 7, 9, 10, 12,23],
       [13, 14, 15, 19, 20, 21, 22]
     ];
     return arrGroup[type].map(i => ({

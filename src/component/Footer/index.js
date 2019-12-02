@@ -49,7 +49,6 @@ class Footer extends React.Component {
           <img src={wechatIcon} />
           <a target='_blank' rel='noopener noreferrer' href='https://www.weibo.com/CryptoYC'><img src={weiboIcon} /></a>
           <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/CryptoYC'><img src={twitterIcon} /></a>
-          <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/CryptoYC'><img src={facebookIcon} /></a>
           <a target='_blank' rel='noopener noreferrer' href='https://t.me/CryptoYC'><img src={telegramIcon} /></a>
           <a target='_blank' rel='noopener noreferrer' href='https://github.com/CryptoYC'><img src={githubIcon} /></a>
           <a target='_blank' rel='noopener noreferrer' href='https://medium.com/@CryptoYC'><img src={mediumIcon} /></a>
