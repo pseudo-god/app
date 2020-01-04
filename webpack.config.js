@@ -10,7 +10,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");//css分离打包
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");//js压缩
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"); //css压缩
-const createHtml =require("./config/create-html");// html配置
+const createHtml = require("./config/create-html");// html配置
 const getEntry = require("./config/get-entry");
 const entry = getEntry("./src/pages");
 const htmlArr = createHtml("./src/pages");
@@ -28,13 +28,13 @@ module.exports = (env, argv) => ({
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader:"babel-loader",
-					options:{
+					loader: "babel-loader",
+					options: {
 						presets: [
 							"@babel/preset-env",
 							"@babel/preset-react",
-							{"plugins": ["@babel/plugin-proposal-class-properties"]} //这句很重要 不然箭头函数出错
-						], 
+							{ "plugins": ["@babel/plugin-proposal-class-properties"] } //这句很重要 不然箭头函数出错
+						],
 					}
 				},
 			},
@@ -46,31 +46,40 @@ module.exports = (env, argv) => ({
 			{
 				test: /\.(scss|css)$/, //css打包 路径在plugins里
 				use: [
-					argv.mode == "development" ? { loader: "style-loader"} :MiniCssExtractPlugin.loader,
+					argv.mode == "development" ? { loader: "style-loader" } : MiniCssExtractPlugin.loader,
 					{ loader: "css-loader", options: { url: false, sourceMap: true } },
 					{ loader: "sass-loader", options: { sourceMap: true } }
 				],
 				exclude: /node_modules/,
 			},
 			{
-                test: /\.(png|jpg|gif)$/,
-                loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',
-                options:{
-                    publicPath:'/'
-                }
-            },
-		 
+				test: /\.(png|jpg|gif)$/,
+				loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',
+				options: {
+					publicPath: '/'
+				}
+			},
+
 		],
 	},
 	devServer: {
 		port: 3100,
 		open: true,
+		proxy: {
+			'/api': {
+				target: 'http://cryptoyc.com:5000', // 端口自己配置合适的
+				pathRewrite: {
+					'^/api': '/'
+				},
+				changeOrigin: true
+			}
+		}
 	},
-	resolve:{
-		alias:{
-			src:path.resolve(__dirname,"src/"),
-			component:path.resolve(__dirname,"src/component/"),
-			store:path.resolve(__dirname,"src/store/"),
+	resolve: {
+		alias: {
+			src: path.resolve(__dirname, "src/"),
+			component: path.resolve(__dirname, "src/component/"),
+			store: path.resolve(__dirname, "src/store/"),
 		}
 	},
 	plugins: [

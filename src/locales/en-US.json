@@ -4,6 +4,7 @@
   "COMMUNITY": "Community",
   "INVESTMENT": "Investment",
   "BLOG": "Blog",
+  "DATA":"Data",
   "ABOUT": "About",
   "ABOUT_US": "About Us",
   "GROUP": "Group",
@@ -40,7 +41,7 @@
   "CONTACT_PH3": "Please select a type*",
   "CONTACT_PH4": "Please input content here*",
   "CONTACT_BTN": "Submit",
-  
+
   "INVEST_TITLE1": "Investments",
   "INVEST_TITLE2": "Partnership",
   "INVEST_TITLE3": "Investments",
