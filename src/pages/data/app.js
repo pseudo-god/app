@@ -7,7 +7,7 @@ import intl from "react-intl-universal";
 import {chainInfo} from 'src/request'
 import ChartMarketMood from 'component/echart/chart_marketmood'
 import ChartActive from 'component/echart/chart_active'
-
+import topbg from 'src/assets/data/topbg.jpg';
 
 
 const getRank = (data) => {
@@ -45,7 +45,7 @@ class App extends Component {
       <div className="contact-section data-page">
         <TopNav bg="dark" />
         <div className="head">
-          <img src="src/assets/data/topbg.jpg" />
+          <img src={topbg} />
           <div className="content">
             <div className="title">{intl.get("DATA")}</div>
           </div>
@@ -70,7 +70,7 @@ class App extends Component {
               </div>
               <div className="footer">
                 <span>更新时间: 2019年11月25日</span>
-                <span>数据来源: alternative.me</span>
+                <span>数据来源: troytrade.com</span>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ class App extends Component {
             </div>
             <div className="footer">
               <span>更新时间: 2019年11月25日</span>
-              <span>数据来源: alternative.me</span>
+              <span>数据来源: chain.info</span>
             </div>
           </div>
         </div>

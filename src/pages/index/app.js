@@ -23,6 +23,12 @@ const IMG_LINK = [
 	['https://eos.io', 'https://z.cash', ''],
 ];
 
+const updataTime = (separator = '') =>{
+  let date = new Date().getDate();
+  let month = new Date().getMonth() + 1;
+  let year = new Date().getFullYear();
+  return `${year}${separator}${month < 10 ? `0${month}` : `${month}`}${separator}${date}`
+}
 
 const GetMarketMood = () => {
 	return (
@@ -34,7 +40,7 @@ const GetMarketMood = () => {
 				</div>
 			</div>
 			<div className="item-right">
-				<span>更新时间: 2019-11-25</span>
+				<span>更新时间: {updataTime("-")}</span>
 				<ChartMarketMood></ChartMarketMood>
 				<span>数据来源: alternative.me</span>
 			</div>

@@ -38,7 +38,10 @@ class chartActive extends React.Component {
           right: '20%',
           itemHeight: 5,
           itemWidth: 40,
-          data: ['BTC ', 'ETH ', 'BTC', 'ETH']
+          data: ['BTC ', 'ETH ', 'BTC', 'ETH'],
+          textStyle:{
+            fontSize:10
+          }
         },
         xAxis: {
           type: 'category',
@@ -60,7 +63,7 @@ class chartActive extends React.Component {
         dataZoom: [{
           type: 'inside',
           start: 0,
-          end: 10
+          end: 100
         }, {
           start: 0,
           end: 10,
@@ -77,6 +80,7 @@ class chartActive extends React.Component {
         yAxis: [{
           type: 'value',
           axisLabel: {
+            margin: 20,
             formatter: '{value}'
           },
           axisLine: {
@@ -89,6 +93,7 @@ class chartActive extends React.Component {
             show: false
           },
           axisLabel: {
+            margin: -20,
             color: '#A1A1A1'
           }
         },
@@ -107,6 +112,7 @@ class chartActive extends React.Component {
             show: false
           },
           axisLabel: {
+            margin: -5,
             color: '#A1A1A1'
           }
         }
