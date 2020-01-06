@@ -35,9 +35,6 @@ class chartActive extends React.Component {
           }
         },
         legend: {
-          right: '20%',
-          itemHeight: 5,
-          itemWidth: 40,
           data: ['BTC ', 'ETH ', 'BTC', 'ETH'],
           textStyle:{
             fontSize:10
@@ -79,10 +76,6 @@ class chartActive extends React.Component {
         }],
         yAxis: [{
           type: 'value',
-          axisLabel: {
-            margin: 20,
-            formatter: '{value}'
-          },
           axisLine: {
             show: false
           },
@@ -93,15 +86,16 @@ class chartActive extends React.Component {
             show: false
           },
           axisLabel: {
-            margin: -20,
-            color: '#A1A1A1'
+            textStyle:{
+              fontSize: 10
+            },
+            margin:-20,
+            color: '#A1A1A1',
+            formatter: '{value}'
           }
         },
         {
           type: 'value',
-          axisLabel: {
-            formatter: '{value}'
-          },
           axisLine: {
             show: false
           },
@@ -112,8 +106,13 @@ class chartActive extends React.Component {
             show: false
           },
           axisLabel: {
-            margin: -5,
-            color: '#A1A1A1'
+            color: '#A1A1A1',
+            textStyle:{
+              fontSize: 10
+            },
+            align:'left',
+            padding:[0,0,0,-6],
+            formatter: '{value}'
           }
         }
         ],
@@ -123,7 +122,7 @@ class chartActive extends React.Component {
           yAxisIndex: 1,
           data: btc_price,
           itemStyle: {
-            color: '#ff0015'
+            color: '#D77F0B'
           },
           showSymbol: false
         },
@@ -133,7 +132,7 @@ class chartActive extends React.Component {
           yAxisIndex: 1,
           data: eth_price,
           itemStyle: {
-            color: '#627346'
+            color: '#FBDEAE'
           },
           showSymbol: false
         },
@@ -142,7 +141,7 @@ class chartActive extends React.Component {
           type: 'bar',
           data: btc,
           itemStyle: {
-            color: '#DB3A47'
+            color: '#D52937'
           },
           barGap: 0
         },
@@ -151,7 +150,7 @@ class chartActive extends React.Component {
           type: 'bar',
           data: eth,
           itemStyle: {
-            color: '#131313'
+            color: '#607142'
           },
           barGap: 0
         }
