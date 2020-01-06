@@ -2,7 +2,7 @@
 
 .index-section {
   .btn-red {
-    color: $red!important;
+    color: $red !important;
     border: 0.125rem solid $red;
     cursor: pointer;
     display: inline-block;
@@ -46,5 +46,63 @@
 
   .section-bd {
     padding: 3.125rem 2.5rem;
+  }
+
+  // 数据div
+  .list-item-data {
+    height: 400px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    box-sizing: content-box;
+
+    .more-button {
+      margin-top: 2rem;
+      display: inline-block;
+      border-radius: 2px;
+      border: 1px solid #000;
+      width: 200px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 5px 0;
+      cursor: pointer;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .more-button:hover {
+      color: #000;
+    }
+
+    .item-left {
+      & > div {
+        display: flex;
+        flex-direction: column;
+
+        span:first-child {
+          font-size: 2rem;
+        }
+
+        span:last-child {
+          font-size: 1rem;
+          font-weight: 600;
+          letter-spacing: 4.5px;
+        }
+      }
+    }
+
+    .item-right {
+      margin-top: 1.2rem;
+      .chart-market-mood {
+      }
+
+      span {
+        width: 100%;
+        text-align: right;
+        font-size: 0.75rem;
+        color: #999;
+        display: inline-block;
+      }
+    }
   }
 }
