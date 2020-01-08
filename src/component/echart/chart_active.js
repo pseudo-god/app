@@ -76,6 +76,14 @@ class chartActive extends React.Component {
         }],
         yAxis: [{
           type: 'value',
+          name:'活跃地址数',
+          type: 'value',
+          nameTextStyle:{
+            color:'#9E9F9F',
+            fontSize:10,
+            align:'right',
+            padding:[4, -20, 4, 4]
+          },
           axisLine: {
             show: false
           },
@@ -95,6 +103,12 @@ class chartActive extends React.Component {
           }
         },
         {
+          name:'价格($)',
+          nameTextStyle:{
+            color:'#9E9F9F',
+            fontSize:10,
+            padding:[4, -20, 4, 4]
+          },
           type: 'value',
           axisLine: {
             show: false
