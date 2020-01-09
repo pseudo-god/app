@@ -25,7 +25,12 @@ const getRank = (data) => {
     )
   })
 }
-
+const updataTime = (separator = '') =>{
+  let date = new Date().getDate();
+  let month = new Date().getMonth() + 1;
+  let year = new Date().getFullYear();
+  return `${year}${separator}${month < 10 ? `0${month}` : `${month}`}${separator}${date}`
+}
 class App extends Component {
   constructor(p) {
     super(p);
@@ -69,7 +74,7 @@ class App extends Component {
                 <ChartMarketMood />
               </div>
               <div className="footer">
-                <span>更新时间: 2019年11月25日</span>
+                <span>更新时间: {updataTime("-")}</span>
                 <span>数据来源: alternative.me</span>
               </div>
             </div>
@@ -79,7 +84,7 @@ class App extends Component {
                 <ChartActive />
               </div>
               <div className="footer">
-                <span>更新时间: 2019年11月25日</span>
+                <span>更新时间: {updataTime("-")}</span>
                 <span>数据来源: troytrade.com</span>
               </div>
             </div>
@@ -96,7 +101,7 @@ class App extends Component {
               {getRank(this.state.list)}
             </div>
             <div className="footer">
-              <span>更新时间: 2019年11月25日</span>
+              <span>更新时间: {updataTime("-")}</span>
               <span>数据来源: chain.info</span>
             </div>
           </div>
