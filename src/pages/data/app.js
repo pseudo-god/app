@@ -25,12 +25,16 @@ const getRank = (data) => {
     )
   })
 }
+
+
 const updataTime = (separator = '') =>{
   let date = new Date().getDate();
   let month = new Date().getMonth() + 1;
   let year = new Date().getFullYear();
   return `${year}${separator}${month < 10 ? `0${month}` : `${month}`}${separator}${date}`
 }
+
+
 class App extends Component {
   constructor(p) {
     super(p);
