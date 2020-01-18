@@ -40,7 +40,9 @@ class App extends Component {
     super(p);
     this.state = {
       list: [],
-      showTips:false
+      showTipsMarket:false,
+      showTipsActive:false,
+      showTipsDeal:false
     };
   }
   componentDidMount(){
@@ -64,49 +66,54 @@ class App extends Component {
         <div className="body-container">
           <div className="charts">
             <div className="chart-item">
-              <div className="title">市场情绪指数<span className="tips" onClick={() => { this.setState({showTips:!this.state.showTips})   }}>?</span></div>
-              {this.state.showTips ? (<div className="tips-box">
-              <p>We are gathering data from the five following sources. Each data point is valued the same as the day before in order to visualize a meaningful progress in sentiment change of the crypto market.First of all, the current index is for bitcoin only (we offer separate indices for large alt coins soon), because a big part of it is the volatility of the coin price.</p>
-              <p>But let’s list all the different factors we’re including in the current index:</p>
-              <p>Volatility (25 %)</p>
-              <p>Market Momentum/Volume (25%)</p>
-              <p>Social Media (15%)</p>
-              <p>Surveys (15%)</p>
-              <p>Dominance (10%)</p>
+            <div className="title">{intl.get("marketSentiment")}<span className="tips" onClick={() => { this.setState({showTipsMarket:!this.state.showTipsMarket})   }}>?</span></div>
+              {this.state.showTipsMarket ? (<div className="tips-box">
+              <p>{intl.get('showTipsMarket')}</p>
+              <p>{intl.get('showTipsMarket_s1')}</p>
+              <p>{intl.get('showTipsMarket_s2')}</p>
+              <p>{intl.get('showTipsMarket_s3')}</p>
+              <p>{intl.get('showTipsMarket_s4')}</p>
+              <p>{intl.get('showTipsMarket_s5')}</p>
               </div>): ""}
               <div className="chart">
                 <ChartMarketMood />
               </div>
               <div className="footer">
-                <span>更新时间: {updataTime("-")}</span>
-                <span>数据来源: alternative.me</span>
+                <span>{intl.get("Updated")}: {updataTime("-")}</span>
+                <span>{intl.get("dataSources")}: alternative.me</span>
               </div>
             </div>
             <div className="chart-item">
-              <div className="title">活跃地址/价格</div>
+            <div className="title">{intl.get("addressNumPrice")}<span className="tips" onClick={() => { this.setState({showTipsActive:!this.state.showTipsActive})   }}>?</span></div>
+              {this.state.showTipsActive ? (<div className="tips-box active-tips-box">
+              <p>{intl.get('showTipsActive')}</p>
+              </div>): ""}
               <div className="chart">
                 <ChartActive />
               </div>
               <div className="footer">
-                <span>更新时间: {updataTime("-")}</span>
-                <span>数据来源: troytrade.com</span>
+                <span>{intl.get("Updated")}: {updataTime("-")}</span>
+                <span>{intl.get("dataSources")}: troytrade.com</span>
               </div>
             </div>
           </div>
           <div className="rank">
-            <div className="title">交易所排行</div>
+          <div className="title">{intl.get("cryptocurrency")}<span className="tips" onClick={() => { this.setState({showTipsDeal:!this.state.showTipsDeal})   }}>?</span></div>
+            {this.state.showTipsDeal ? (<div className="tips-box rank-tips-box">
+            <p>{intl.get('showTipsDeal')}</p>
+              </div>): ""}
             <div className="content">
               <div className="item">
-                <span>排行</span>
-                <span>交易所</span>
-                <span>链上余额(BTC)</span>
-                <span>地址数</span>
+                <span>{intl.get("ranking")}</span>
+                <span>{intl.get("exchange")}</span>
+                <span>{intl.get("balance")}</span>
+                <span>{intl.get("address")}</span>
               </div>
               {getRank(this.state.list)}
             </div>
             <div className="footer">
-              <span>更新时间: {updataTime("-")}</span>
-              <span>数据来源: chain.info</span>
+              <span>{intl.get("Updated")}: {updataTime("-")}</span>
+              <span>{intl.get("dataSources")}: chain.info</span>
             </div>
           </div>
         </div>

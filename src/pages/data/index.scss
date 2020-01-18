@@ -34,6 +34,54 @@
     min-height: 200px;
     background: #eee;
     padding: 10px;
+    .tips {
+      width: 25px;
+      height: 25px;
+      font-size: 18px;
+      margin-left: 10px;
+      border-radius: 50%;
+      background-color: rgb(200, 201, 201);
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .tips-box {
+      position: absolute;
+      right: 0px;
+      top: 50px;
+      width: 100%;
+      border-radius: 4px;
+      z-index: 100;
+      padding: 10px 20px;
+      color: #fff;
+      border: 1px solid #ddd;
+      background-color: rgba(95, 88, 86, 0.8);
+
+      p {
+        font-size: 11px;
+      }
+    }
+    .active-tips-box {
+      top: 80px;
+    }
+    .rank-tips-box {
+      left: 0px;
+      top: 80px;
+    }
+
+    .tips-box::before {
+      content: "";
+      position: absolute;
+      top: -21px;
+      left: 49%;
+      width: 0;
+      z-index: 100;
+      height: 0;
+      border: 10px solid transparent;
+      border-bottom-color: rgba(95, 88, 86, 0.8);
+    }
     .charts {
       .chart-item {
         margin-top: 1.25rem;
@@ -58,48 +106,6 @@
           color: #999;
           padding-top: 10px;
         }
-
-        .tips {
-          width: 25px;
-          height: 25px;
-          font-size: 18px;
-          margin-left: 10px;
-          border-radius: 50%;
-          background-color: rgb(200, 201, 201);
-          color: #fff;
-          text-align: center;
-          cursor: pointer;
-          display: inline-block;
-        }
-
-        .tips-box {
-          position: absolute;
-          right: 0px;
-          top: 50px;
-          width: 100%;
-          border-radius: 4px;
-          z-index: 100;
-          padding: 10px 20px;
-          color: #fff;
-          border: 1px solid #ddd;
-          background-color: rgba(95, 88, 86, 0.8);
-
-          p {
-            font-size: 11px;
-          }
-        }
-
-        .tips-box::before {
-          content: "";
-          position: absolute;
-          top: -21px;
-          left: 49%;
-          width: 0;
-          z-index: 100;
-          height: 0;
-          border: 10px solid transparent;
-          border-bottom-color: rgba(95, 88, 86, 0.8);
-        }
       }
       .chart-item:first-child {
         .chart {
@@ -116,6 +122,7 @@
       background: #ffffff;
       padding: 10px;
       box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+      position: relative;
       .title {
         border-bottom: 1px solid #cccccc;
         font-size: 1.5rem;

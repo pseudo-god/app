@@ -35,16 +35,16 @@ const GetMarketMood = () => {
 		<div className="list_item list-item-data">
 			<div className="item-left">
 				<div>
-					<span>市场情绪指数</span>
-					<span>加密货币市场情绪分析</span>
+					<span>{intl.get('marketSentiment')}</span>
+					<span>{intl.get('sentimentAnalysis')}</span>
 				</div>
 			</div>
 			<div className="item-right">
-				<span>更新时间: {updataTime("-")}</span>
+				<span>{intl.get('Updated')}: {updataTime("-")}</span>
 				<ChartMarketMood></ChartMarketMood>
-				<span>数据来源: alternative.me</span>
+				<span>{intl.get('dataSources')}: alternative.me</span>
 			</div>
-			<div><a className="more-button" href="/data">更多数据></a></div>
+			<div><a className="more-button" href="/data">{intl.get('moreData')}></a></div>
 		</div>
 	)
 }

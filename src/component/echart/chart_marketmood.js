@@ -2,6 +2,8 @@ import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 import echarts from 'echarts'
 import {market_moon} from 'src/request'
+import intl from 'react-intl-universal';
+
 class chartMarketMood extends React.Component {
   state = {
     option: {}
@@ -9,16 +11,24 @@ class chartMarketMood extends React.Component {
   componentDidMount(){
     this.getOption();
   }
+  componentWillUpdate() {
+    if (this.state.option.series) {
+      this.state.option.series[0].detail.formatter = `{b|${intl.get(this.state.option.status)}}`
+    }
+
+    this.echarts_react.getEchartsInstance().setOption(this.state.option);
+  }
   getOption() {
     market_moon({}).then(res => {
       let value = res.data.GreedIndex
-      let status = value < 25 ? '极度恐惧' : value < 50 ? '恐惧' : value < 75 ? '贪婪' : '极度贪婪'
+      let status = value < 25 ? "itsExtreme" : value < 50 ? "fear" : value < 75 ? "greed" : "extremenGreed"
       let bgColor = value < 25 ? '#C84048' : value < 50 ? '#A25545' : value < 75 ? '#48522D' : '#3A4328'
 
       let option = {
+        status,
         series: [
           {
-            name: '市场情绪指数',
+            name: intl.get("marketSentiment"),
             type: 'gauge',
             data: [
               {value: value}
@@ -62,8 +72,7 @@ class chartMarketMood extends React.Component {
             },
             detail: {
               formatter: [
-                '{a|当前}',
-                `{b|${status}}`
+                `{b|${intl.get(status)}}`
               ].join(''),
               rich: {
                 a: {
@@ -110,6 +119,7 @@ class chartMarketMood extends React.Component {
   render() {
     return (
       <ReactEcharts
+       ref={(e) => { this.echarts_react = e; }}
         option={this.state.option}
         style={{width: '100%', height: '240px'}}
         className='chart-market-mood' />
