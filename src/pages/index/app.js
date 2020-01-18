@@ -60,10 +60,6 @@ class App extends Component {
 					<div className='slogan'>{intl.get('INDEX_TITLE2')}</div>
 					<div className='slogan red'>{intl.get('INDEX_TITLE3')}</div>
 					{GetMarketMood()}
-					<div className='desc-wrapper'>
-						<div className='desc'>{intl.get('INDEX_DESC1')}</div>
-						<div className='desc'>{intl.get('INDEX_DESC2')}</div>
-					</div>
 				</div>
 
 				<div className='section-md'>
