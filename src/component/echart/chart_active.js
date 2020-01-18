@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 import { activePrice } from 'src/request'
+import intl from 'react-intl-universal';
 
 class chartActive extends React.Component {
   state = {
@@ -8,6 +9,14 @@ class chartActive extends React.Component {
   }
   componentDidMount() {
     this.getOption()
+  }
+  componentWillUpdate(){
+    if(this.state.option.tooltip){
+      this.state.option.yAxis[0].name=intl.get("addressNum")
+      this.state.option.yAxis[1].name=intl.get("price")
+    }
+
+    this.echarts_react.getEchartsInstance().setOption(this.state.option);
   }
   getOption() {
     activePrice().then(res => {
@@ -76,7 +85,7 @@ class chartActive extends React.Component {
         }],
         yAxis: [{
           type: 'value',
-          name:'活跃地址数',
+          name: intl.get("addressNum"),
           type: 'value',
           nameTextStyle:{
             color:'#9E9F9F',
@@ -103,7 +112,7 @@ class chartActive extends React.Component {
           }
         },
         {
-          name:'价格($)',
+          name: intl.get("price"),
           nameTextStyle:{
             color:'#9E9F9F',
             fontSize:10,
@@ -184,6 +193,7 @@ class chartActive extends React.Component {
   render() {
     return (
       <ReactEcharts
+       ref={(e) => { this.echarts_react = e;}}
         option={this.state.option}
         style={
           {
